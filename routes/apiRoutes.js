@@ -4,7 +4,7 @@ const app = require("express").Router();
 const uniqid = require("uniqid");
 
 // GET request for notes
-app.get("/api/notes", (req, res) => {
+app.get('/api/notes', (req, res) => {
   // Log our request to the terminal
   console.info(`${req.method} request received to get notes`);
 
@@ -16,11 +16,11 @@ app.get("/api/notes", (req, res) => {
   //     res.json(existingNotes);
   //   }
   // });
-  res.sendFile(path.join(__dirname, "db/db.json"));
+  res.sendFile(path.join(__dirname, './db/db.json'));
 });
 
 // POST request to add a note
-app.post("/api/notes", (req, res) => {
+app.post('/api/notes', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to add a note`);
 
@@ -69,13 +69,15 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
-app.delete("/api/notes:id", (req, res) => {
+app.delete('/api/notes:id', (req, res) => {
     // read notes from db.json
-    const readNotes = JSON.parse(fs.readFile('db/db.json'))
+    const readNotes = JSON.parse(fs.readFile('./db/db.json'))
     // removing note with id
     const deleteNotes = readNotes.filter(({id})=> id !== req.params.id);
     // Rewriting note to db.json
-    fs.writeFile('db/db.json', JSON.stringify(deleteNotes));
+    fs.writeFile('./db/db.json', JSON.stringify(deleteNotes));
     res.json(deleteNotes);
 
 });
+
+module.exports = app;

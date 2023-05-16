@@ -4,12 +4,15 @@
 
 ## Description
 
-The goal for this challenge was to create an application that can be used to write and save notes. Note data are saved and retrieved from a JSON file using an Express.js back end.
+The goal for this challenge was to create an application that can be used to write and save notes. Note data are saved and retrieved from a JSON file using an Express.js back end. The application will be deployed to Heroku.
+
+![image](https://github.com/AmyEdmond/Note_Taker/assets/122325607/2e1ba478-c355-4631-a24a-af2bb05b32f1)
 
 ## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Technologies used](#technologies)
 * [Credits](#credits)
 * [License](#license)
 * [Contributions](#contributions)
@@ -25,7 +28,17 @@ The goal for this challenge was to create an application that can be used to wri
 
 ## Usage
 
-Within the directory, the application is invoked by using the command `node index.js`.
+Within the directory, the application is invoked by using the command `node server.js`.
+
+## Technologies used
+
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
+* Node.js
+* Express.js
+* Uniqid
 
 
 ## Credits
@@ -42,7 +55,7 @@ If you see something in this project that could be improved, you can do a featur
 
 
 ## Tests
-Watch this [demo]
+N/A
 
 ## Questions
 
